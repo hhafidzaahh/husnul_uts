@@ -62,7 +62,7 @@ nav a.active {
   display: none;
   cursor: pointer;
   margin-left: auto;
-  padding-left: 25rem;
+  padding-left: 1rem;
 }
 
 .nav-links {
