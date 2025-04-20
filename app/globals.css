@@ -1,0 +1,483 @@
+@import "tailwindcss";
+
+/* globals.css */
+
+body {
+  background-color: white;
+  color: black;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark {
+  background-color: #121212;
+  color: white;
+}
+
+nav.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+body.dark nav.navbar {
+  background-color: #1a1a1a;
+}
+
+nav ul {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: inherit;
+}
+
+nav a.active {
+  font-weight: bold;
+  text-decoration: underline;
+}
+.navbar {
+  padding: 1rem;
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+.navbar-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 1rem; 
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+.menu-icon {
+  display: none;
+  cursor: pointer;
+  margin-left: auto;
+  padding-left: 25rem;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.nav-links a.active {
+  font-weight: bold;
+  border-bottom: 2px solid var(--accent-color);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    display: none;
+    margin-top: 1rem;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .theme-toggle {
+    margin-top: 1rem;
+  }
+}
+
+.theme-toggle-btn {
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-size: 1rem;
+}
+
+body {
+  background-color: #ffffff;
+  color: #1a1a1a;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body.dark {
+  background-color: #18181b;
+  color: #f1f5f9;
+}
+
+/* About Page */
+.about-page {
+  min-height: 100vh;
+  padding: 3rem 1rem;
+}
+
+.about-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.about-sections {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.about-card {
+  background-color: #ffffff;
+  color: #1a1a1a;
+  border-radius: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark .about-card {
+  background-color: #27272a;
+  color: #f1f5f9;
+}
+
+.about-heading {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2563eb;
+  margin-bottom: 1rem;
+}
+
+.portfolio-page {
+  padding: 3rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.portfolio-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.portfolio-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.portfolio-card {
+  background-color: #fff;
+  color: #111;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+.portfolio-card:hover {
+  transform: scale(1.03);
+}
+
+body.dark .portfolio-card {
+  background-color: #1e1e1e;
+  color: #f3f3f3;
+}
+
+.portfolio-image-wrapper {
+  overflow: hidden;
+  border-radius: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.portfolio-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 0.75rem;
+}
+
+.portfolio-project-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.portfolio-desc {
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+}
+
+.portfolio-tech {
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.portfolio-link {
+  color: #2563eb;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.portfolio-link:hover {
+  text-decoration: underline;
+}
+.portfolio-image-wrapper {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.portfolio-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 0.75rem;
+}
+.contact-container {
+  max-width: 800px;
+  margin: auto;
+  padding: 2rem;
+}
+.contact-page {
+  padding: 3rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.contact-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.contact-form {
+  background-color: #fff;
+  color: #111;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+}
+
+body.dark .contact-form {
+  background-color: #1e1e1e;
+  color: #f3f3f3;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+.contact-info,
+.comment-form,
+.rating-form {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+.comment-form form,
+.rating-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+input, textarea {
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #999;
+  border-radius: 8px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin-top: 0.25rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+}
+
+body.dark .contact-form input,
+body.dark .contact-form textarea {
+  background-color: #2c2c2c;
+  color: #f3f3f3;
+  border-color: #444;
+}
+
+.contact-form button {
+  background-color: #2563eb;
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; 
+  margin-bottom: 0.5rem;
+}
+
+.contact-icon {
+  width: 1rem;
+  height: 1rem;
+  flex-shrink: 0; 
+}
+
+.contact-form button:hover {
+  background-color: #1e4fd6;
+}
+
+body.dark .contact-info,
+body.dark .comment-form,
+body.dark .rating-form {
+  background-color: #1e1e1e;
+  color: #f3f3f3;
+}
+
+body.dark .comment-form input,
+body.dark .comment-form textarea,
+body.dark .rating-form input,
+body.dark .rating-form textarea {
+  background-color: #2c2c2c;
+  color: #f3f3f3;
+  border-color: #444;
+}
+
+/* Chatbot Style */
+.chatbot-container {
+  max-width: 600px;
+  margin: 3rem auto;
+  padding: 1.5rem;
+  background-color: #b0b0b0;
+  border-radius: 1rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.chatbot-title {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #2563eb;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.chatbox {
+  background-color: #fff;
+  height: 300px;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  overflow-y: auto;
+  box-shadow: inset 0 0 4px rgba(0,0,0,0.1);
+  margin-bottom: 1rem;
+}
+
+.message.user {
+  text-align: right;
+  color: #2563eb;
+  margin-bottom: 0.5rem;
+}
+
+.chat-input-area {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.chat-input-area input {
+  flex: 1;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  border: 1px solid #999;
+  font-size: 1rem;
+}
+
+.chat-input-area button {
+  background-color: #2563eb;
+  color: #fff;
+  padding: 0.75rem 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.chat-input-area button:hover {
+  background-color: #1e4fd6;
+}
+
+/* 🌙 Dark Mode Support */
+body.dark .chatbot-container {
+  background-color: #2d2d2d;
+}
+
+body.dark .chatbox {
+  background-color: #1e1e1e;
+  color: #f3f3f3;
+}
+
+body.dark .chat-input-area input {
+  background-color: #2c2c2c;
+  color: #f3f3f3;
+  border-color: #444;
+}
+
+body.dark .chat-input-area button {
+  background-color: #2563eb;
+  color: #fff;
+}
+
+body.dark .chat-input-area button:hover {
+  background-color: #1e4fd6;
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
